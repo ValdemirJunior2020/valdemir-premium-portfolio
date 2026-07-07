@@ -46,6 +46,7 @@ const serviceIcons = [MousePointer2, Code2, PenLine, BarChart3];
 const pillarIcons = [Target, Layers3, Zap];
 const metricIcons = [Gauge, ShieldCheck, TrendingUp];
 const processIcons = [Target, Sparkles, Code2, Rocket];
+
 const image = '/images/valdemir-profile.webp';
 const smallImage = '/images/valdemir-profile-small.webp';
 
@@ -57,6 +58,10 @@ export default function App() {
       'Hi Valdemir, I saw your portfolio and would like to talk about a marketing or React app project.',
     []
   );
+
+  const whatsappHref = `https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
 
   useEffect(() => {
     document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
@@ -74,10 +79,6 @@ export default function App() {
       window.removeEventListener('keydown', closeOnEscape);
     };
   }, [mobileMenuOpen]);
-
-  const whatsappHref = `https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(
-    whatsappMessage
-  )}`;
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
@@ -127,6 +128,7 @@ export default function App() {
           >
             <div className="mobileMenuTop">
               <Logo compact />
+
               <button
                 type="button"
                 className="mobileCloseButton"
@@ -163,19 +165,20 @@ export default function App() {
             animate="show"
             transition={{ duration: 0.65 }}
           >
-            <span className="eyebrow">Marketing + React App Development</span>
-            <h1>
-              I build premium marketing systems and React apps that turn traffic into real leads.
-            </h1>
+            <span className="eyebrow">Marketing + React Development</span>
+
+            <h1>Premium websites and React apps built to turn clicks into real leads.</h1>
+
             <p>
-              I help businesses launch fast websites, conversion-focused landing pages, dashboards,
-              and full-stack React apps with a clean marketing strategy behind every screen.
+              I help businesses launch fast websites, high-converting landing pages, dashboards,
+              and full-stack React apps with a clear marketing strategy behind every screen.
             </p>
 
             <div className="heroActions">
               <a href={whatsappHref} target="_blank" rel="noreferrer" className="primaryButton">
                 Start a project <ArrowRight size={18} />
               </a>
+
               <a href="#pricing" className="secondaryButton">
                 See pricing <Sparkles size={17} />
               </a>
@@ -198,14 +201,17 @@ export default function App() {
               <div className="portraitFrame">
                 <img src={image} alt="Valdemir R. Gonçalves Junior" loading="eager" />
               </div>
+
               <div className="liveBadge">
                 <span />
                 Available for select projects
               </div>
+
               <div className="heroMiniCard topMiniCard">
                 <strong>React</strong>
                 <p>Fast app UI</p>
               </div>
+
               <div className="heroMiniCard bottomMiniCard">
                 <strong>CRO</strong>
                 <p>Clear lead path</p>
@@ -217,6 +223,7 @@ export default function App() {
         <section className="metricsStrip sectionContainer" aria-label="Portfolio strengths">
           {metrics.map(([value, label], index) => {
             const Icon = metricIcons[index];
+
             return (
               <div className="metricItem" key={label}>
                 <Icon size={22} />
@@ -237,6 +244,7 @@ export default function App() {
             transition={{ duration: 0.55 }}
           >
             <img src={smallImage} alt="Valdemir smiling in a suit" loading="lazy" />
+
             <div>
               <strong>{contact.name}</strong>
               <span>{contact.role}</span>
@@ -252,11 +260,13 @@ export default function App() {
             transition={{ duration: 0.55, delay: 0.08 }}
           >
             <span className="eyebrow">About Valdemir</span>
+
             <h2>Developer thinking meets marketing thinking.</h2>
+
             <p>
-              Most sites look fine but don’t explain the offer, build trust, or make it easy to take action.
-              My work brings the marketing and the code together, so your page, app, copy, forms, and
-              follow-up all support the same goal: more qualified conversations.
+              Most sites look fine but don’t explain the offer, build trust, or make it easy to
+              take action. My work brings the marketing and the code together, so your page, app,
+              copy, forms, and follow-up all support the same goal: more qualified conversations.
             </p>
 
             <div className="stackWrap" aria-label="Technical stack">
@@ -269,6 +279,7 @@ export default function App() {
           <div className="pillarList">
             {pillars.map((pillar, index) => {
               const Icon = pillarIcons[index];
+
               return (
                 <motion.article
                   className="pillarItem"
@@ -282,6 +293,7 @@ export default function App() {
                   <span className="smallIcon">
                     <Icon size={18} />
                   </span>
+
                   <div>
                     <strong>{pillar.title}</strong>
                     <p>{pillar.description}</p>
@@ -302,6 +314,7 @@ export default function App() {
           <div className="cardGrid fourGrid">
             {services.map((service, index) => {
               const Icon = serviceIcons[index];
+
               return (
                 <motion.article
                   className="serviceCard glassCard"
@@ -315,8 +328,10 @@ export default function App() {
                   <span className={`serviceIcon tone${index + 1}`}>
                     <Icon size={24} />
                   </span>
+
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
+
                   <a href="#pricing" aria-label={`${service.title} pricing`}>
                     View pricing <ArrowRight size={16} />
                   </a>
@@ -344,8 +359,10 @@ export default function App() {
                 transition={{ duration: 0.5, delay: index * 0.08 }}
               >
                 <span>{project.tag}</span>
+
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
+
                 <a href="#contact">
                   Talk about this <ArrowRight size={15} />
                 </a>
@@ -373,12 +390,16 @@ export default function App() {
                 transition={{ duration: 0.45, delay: index * 0.07 }}
               >
                 {pack.featured && <span className="popularBadge">Best for app builds</span>}
+
                 <h3>{pack.name}</h3>
+
                 <p className="packageDescription">{pack.description}</p>
+
                 <div className="priceLine">
                   <strong>{pack.price}</strong>
                   <span>{pack.cadence}</span>
                 </div>
+
                 <ul>
                   {pack.features.map((feature) => (
                     <li key={feature}>
@@ -386,6 +407,7 @@ export default function App() {
                     </li>
                   ))}
                 </ul>
+
                 <a
                   href={`https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(
                     `${pack.name}: ${whatsappMessage}`
@@ -401,14 +423,12 @@ export default function App() {
         </section>
 
         <section className="processSection sectionContainer" id="process">
-          <SectionHeading
-            eyebrow="Process"
-            title="A simple path from idea to launched asset"
-          />
+          <SectionHeading eyebrow="Process" title="A simple path from idea to launched asset" />
 
           <div className="processGrid">
             {process.map((step, index) => {
               const Icon = processIcons[index];
+
               return (
                 <motion.article
                   className="processCard"
@@ -421,6 +441,7 @@ export default function App() {
                 >
                   <span className="processNumber">0{index + 1}</span>
                   <Icon size={24} />
+
                   <h3>{step.title}</h3>
                   <p>{step.description}</p>
                 </motion.article>
@@ -434,6 +455,7 @@ export default function App() {
             <span className="eyebrow">Ready to build?</span>
             <h2>Let’s turn your offer into a page, app, or system people can actually act on.</h2>
           </div>
+
           <a className="primaryButton" href={whatsappHref} target="_blank" rel="noreferrer">
             Message me on WhatsApp <MessageCircle size={18} />
           </a>
@@ -443,18 +465,23 @@ export default function App() {
       <footer className="siteFooter sectionContainer" id="contact">
         <div className="footerBrand">
           <Logo />
+
           <h2>Tell me what you’re trying to build.</h2>
+
           <p>
-            Send the goal, the current website or app if you have one, and what you want visitors or users to do. I’ll help you choose the right next step.
+            Send the goal, the current website or app if you have one, and what you want visitors
+            or users to do. I’ll help you choose the right next step.
           </p>
 
           <div className="footerSocials">
             <a href={contact.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
               <BriefcaseBusiness size={20} />
             </a>
+
             <a href={`mailto:${contact.email}`} aria-label="Email Valdemir">
               <Mail size={20} />
             </a>
+
             <a href={whatsappHref} target="_blank" rel="noreferrer" aria-label="WhatsApp Valdemir">
               <MessageCircle size={20} />
             </a>
@@ -463,14 +490,19 @@ export default function App() {
 
         <div className="footerDetails">
           <img src={smallImage} alt="Valdemir R. Gonçalves Junior" loading="lazy" />
+
           <h3>{contact.name}</h3>
+
           <p>{contact.role}</p>
+
           <p>
             <MapPin size={16} /> {contact.location}
           </p>
+
           <p>
             <Mail size={16} /> {contact.email}
           </p>
+
           <p>
             <MessageCircle size={16} /> {contact.phoneDisplay}
           </p>
@@ -478,15 +510,36 @@ export default function App() {
 
         <div className="contactFormBox">
           <h3>Project inquiry</h3>
+
           <p>This form is ready for Netlify Forms after deployment.</p>
-          <form name="project-inquiry" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+
+          <form
+            name="project-inquiry"
+            method="POST"
+            action="/"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
             <input type="hidden" name="form-name" value="project-inquiry" />
+
             <p className="hiddenField">
-              <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+              <label>
+                Don’t fill this out if you’re human: <input name="bot-field" />
+              </label>
             </p>
+
             <input aria-label="Name" name="name" placeholder="Your name" required />
+
             <input aria-label="Email" name="email" type="email" placeholder="Your email" required />
-            <textarea aria-label="Project details" name="message" placeholder="What do you need built or improved?" rows={4} required />
+
+            <textarea
+              aria-label="Project details"
+              name="message"
+              placeholder="What do you need built or improved?"
+              rows={4}
+              required
+            />
+
             <button type="submit">
               Send inquiry <ArrowRight size={18} />
             </button>
@@ -494,7 +547,11 @@ export default function App() {
         </div>
       </footer>
 
-      <FloatingWhatsApp number={contact.whatsappNumber} label="Message Valdemir" message={whatsappMessage} />
+      <FloatingWhatsApp
+        number={contact.whatsappNumber}
+        label="Message Valdemir"
+        message={whatsappMessage}
+      />
     </div>
   );
 }

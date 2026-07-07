@@ -10,10 +10,10 @@ export function Logo({ compact = false }: LogoProps) {
       <span className="logoMark" aria-hidden="true">
         {contact.initials}
       </span>
+
       {!compact && (
         <span className="logoText">
           <strong>{contact.name}</strong>
-          <small>{contact.role}</small>
         </span>
       )}
     </a>
