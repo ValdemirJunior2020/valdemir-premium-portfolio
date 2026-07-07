@@ -24,6 +24,7 @@ import {
 import { useEffect, useMemo, useState } from 'react';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { Logo } from './components/Logo';
+import { LogoMarquee } from './components/LogoMarquee';
 import {
   buildTypes,
   contact,
@@ -219,6 +220,8 @@ export default function App() {
             </div>
           </motion.div>
         </section>
+
+        <LogoMarquee />
 
         <section className="metricsStrip sectionContainer" aria-label="Portfolio strengths">
           {metrics.map(([value, label], index) => {

@@ -1189,3 +1189,170 @@ svg {
   line-height: 1.03;
   letter-spacing: -0.035em;
 }
+
+.logoMarqueeSection {
+  margin-top: 2.5rem;
+  overflow: hidden;
+}
+
+.logoMarqueeLabel {
+  margin: 0 0 0.85rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.logoMarquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-block: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 12%,
+    #000 88%,
+    transparent
+  );
+}
+
+.logoMarqueeTrack {
+  display: flex;
+  width: max-content;
+  gap: 0.8rem;
+  padding: 1rem 0.8rem;
+  animation: marqueeRightToLeft 26s linear infinite;
+}
+
+.logoMarquee:hover .logoMarqueeTrack {
+  animation-play-state: paused;
+}
+
+.fakeLogoCard {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: max-content;
+  padding: 0.72rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  color: var(--ink-strong);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.14);
+}
+
+.fakeLogoCard span {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  border-radius: 11px;
+  color: #04111d;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.fakeLogoCard strong {
+  color: var(--ink-strong);
+  font-size: 0.9rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.logoColor1 {
+  background: linear-gradient(135deg, rgba(114, 247, 213, 0.14), rgba(56, 189, 248, 0.12));
+}
+
+.logoColor1 span {
+  background: linear-gradient(135deg, #72f7d5, #38bdf8);
+}
+
+.logoColor2 {
+  background: linear-gradient(135deg, rgba(251, 113, 133, 0.16), rgba(250, 204, 21, 0.12));
+}
+
+.logoColor2 span {
+  background: linear-gradient(135deg, #fb7185, #facc15);
+}
+
+.logoColor3 {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.18), rgba(96, 165, 250, 0.12));
+}
+
+.logoColor3 span {
+  background: linear-gradient(135deg, #8b5cf6, #60a5fa);
+}
+
+.logoColor4 {
+  background: linear-gradient(135deg, rgba(52, 211, 153, 0.16), rgba(20, 184, 166, 0.12));
+}
+
+.logoColor4 span {
+  background: linear-gradient(135deg, #34d399, #14b8a6);
+}
+
+.logoColor5 {
+  background: linear-gradient(135deg, rgba(244, 114, 182, 0.16), rgba(168, 85, 247, 0.12));
+}
+
+.logoColor5 span {
+  background: linear-gradient(135deg, #f472b6, #a855f7);
+}
+
+.logoColor6 {
+  background: linear-gradient(135deg, rgba(251, 146, 60, 0.17), rgba(248, 113, 113, 0.12));
+}
+
+.logoColor6 span {
+  background: linear-gradient(135deg, #fb923c, #f87171);
+}
+
+.logoColor7 {
+  background: linear-gradient(135deg, rgba(45, 212, 191, 0.16), rgba(129, 140, 248, 0.12));
+}
+
+.logoColor7 span {
+  background: linear-gradient(135deg, #2dd4bf, #818cf8);
+}
+
+.logoColor8 {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.16), rgba(34, 197, 94, 0.12));
+}
+
+.logoColor8 span {
+  background: linear-gradient(135deg, #38bdf8, #22c55e);
+}
+
+@keyframes marqueeRightToLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 720px) {
+  .logoMarqueeSection {
+    margin-top: 3.5rem;
+  }
+
+  .logoMarqueeTrack {
+    gap: 1rem;
+    padding: 1.15rem 1rem;
+    animation-duration: 32s;
+  }
+
+  .fakeLogoCard {
+    padding: 0.8rem 1.15rem;
+  }
+
+  .fakeLogoCard strong {
+    font-size: 0.95rem;
+  }
+}
