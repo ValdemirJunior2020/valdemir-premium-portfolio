@@ -4,8 +4,8 @@ export const contact = {
   name: 'Valdemir R. Gonçalves Junior',
   shortName: 'Valdemir Junior',
   initials: 'VJ',
-  role: 'Marketing Specialist + React App Developer',
-  location: 'Available for remote projects',
+  role: 'SEO + GEO Strategist, Web & iOS Developer',
+  location: 'South Florida · Available across Florida and remotely',
   email: 'infojr.83@gmail.com',
   phoneDisplay: '(754) 366-9922',
   whatsappNumber: '17543669922',
@@ -16,172 +16,226 @@ export const contact = {
 export const navItems = [
   { label: 'About', target: 'about' },
   { label: 'Services', target: 'services' },
+  { label: 'Growth', target: 'growth' },
+  { label: 'Work', target: 'work' },
   { label: 'Pricing', target: 'pricing' },
-  { label: 'Process', target: 'process' },
   { label: 'Contact', target: 'contact' },
 ] as const;
 
-export const heroBadges = ['React + TypeScript', 'CRO Landing Pages', 'Marketing Systems'];
+export const heroBadges = [
+  'SEO + Local SEO',
+  'GEO / AI Search',
+  'Landing Pages',
+  'Websites',
+  'iOS Apps',
+] as const;
 
 export const metrics = [
-  ['Fast', 'mobile-first builds'],
-  ['Clear', 'offer + copy strategy'],
-  ['Smart', 'automation + reporting'],
+  ['Visible', 'on Google and AI search'],
+  ['Built', 'to turn traffic into leads'],
+  ['Focused', 'on Florida service businesses'],
 ] as const;
 
 export const stack = [
+  'SEO',
+  'Local SEO',
+  'GEO',
   'React',
-  'React Native',
   'TypeScript',
-  'Tailwind CSS',
+  'SwiftUI',
+  'React Native',
   'Node.js',
   'Firebase',
 ] as const;
 
 export const pillars = [
   {
-    title: 'Conversion-focused strategy',
+    title: 'Search-first strategy',
     description:
-      'Landing pages are planned around one clear action, strong offers, clean UX, and copy that makes the next step obvious.',
+      'Every page starts with the searches, locations, services, and buyer questions your business needs to own.',
   },
   {
-    title: 'Full-stack execution',
+    title: 'Built for Google and AI',
     description:
-      'I can build the front end, connect forms, wire up dashboards, and ship React apps that feel fast on mobile and desktop.',
+      'Clear site structure, useful content, strong entities, and technical signals help search engines and AI systems understand your business.',
   },
   {
-    title: 'Marketing that keeps working',
+    title: 'Designed to create leads',
     description:
-      'Beyond the website, I help with follow-up flows, simple automation, weekly reporting, and the content ideas that keep leads warm.',
+      'Fast pages, strong proof, simple forms, click-to-call actions, and focused offers turn visibility into real conversations.',
   },
 ] as const;
 
 export const services = [
   {
+    title: 'SEO + Local SEO',
+    description:
+      'Technical SEO, service pages, city pages, local keyword strategy, content planning, and on-page improvements built around qualified search demand.',
+  },
+  {
+    title: 'GEO / AI Search Optimization',
+    description:
+      'Content and website structure designed to help ChatGPT, Gemini, Google AI experiences, and other answer engines understand and surface your business.',
+  },
+  {
     title: 'High-Converting Landing Pages',
     description:
-      'Premium React landing pages for service businesses, consultants, coaches, and agencies. Built with CRO, sharp copy, fast load times, and a clear lead path.',
+      'Fast, focused landing pages for Google Ads, Meta campaigns, promotions, lead generation, bookings, calls, and WhatsApp conversations.',
   },
   {
-    title: 'React App Development',
+    title: 'Business Website Development',
     description:
-      'Custom React and React Native apps using TypeScript, Tailwind CSS, Node.js, and Firebase. Great for portals, dashboards, booking tools, and MVPs.',
+      'Modern, mobile-first websites with strong service architecture, location targeting, clear calls to action, and a foundation that can grow with your business.',
   },
   {
-    title: 'Marketing Funnel + Copy',
+    title: 'iOS App Development',
     description:
-      'Offer positioning, page structure, email follow-up ideas, social content angles, and persuasive copy that helps visitors understand why they should act now.',
+      'Custom iPhone apps, mobile portals, booking tools, dashboards, and MVPs built with SwiftUI or React Native for businesses that need more than a website.',
+  },
+] as const;
+
+export const growthOutcomes = [
+  {
+    title: 'Get found by local customers',
+    description:
+      'SEO and local search improvements help the right people find your business when they are ready to call, book, or request a quote.',
+    impact: 'More qualified traffic from Google and local search',
   },
   {
-    title: 'Automation + Reporting',
+    title: 'Show up in AI-powered search',
     description:
-      'Lead capture, workflow automations, Firebase data, and simple dashboards that show what is happening daily, weekly, and monthly.',
+      'Clear content, strong business signals, and GEO-ready site structure help AI tools understand what you offer and who you serve.',
+    impact: 'Better visibility across AI answers and search experiences',
+  },
+  {
+    title: 'Turn clicks into real leads',
+    description:
+      'Focused landing pages guide visitors toward one clear action with strong offers, trust signals, fast forms, calls, and WhatsApp.',
+    impact: 'More calls, bookings, quote requests, and conversations',
+  },
+  {
+    title: 'Build trust with a better website',
+    description:
+      'A fast, polished website explains your value clearly, works smoothly on every screen, and gives customers confidence to contact you.',
+    impact: 'A stronger brand and a smoother path to becoming a customer',
+  },
+  {
+    title: 'Bring your service to mobile',
+    description:
+      'Custom iOS apps and mobile tools can support bookings, customer accounts, notifications, internal workflows, and new digital products.',
+    impact: 'A useful mobile experience built around your business goals',
   },
 ] as const;
 
 export const buildTypes = [
   {
+    tag: 'Local growth',
+    title: 'SEO + GEO growth system',
+    description:
+      'A focused plan covering technical SEO, local pages, AI-search readiness, content priorities, and the conversion gaps holding the site back.',
+  },
+  {
     tag: 'Lead generation',
-    title: 'Landing page sprint for local businesses',
+    title: 'Landing page for calls and bookings',
     description:
-      'A focused page with a strong offer, trust sections, service proof, FAQs, WhatsApp click-to-chat, and Netlify-ready lead capture.',
+      'A fast page with a clear offer, trust sections, service proof, FAQs, call tracking, forms, and WhatsApp lead capture.',
   },
   {
-    tag: 'SaaS / internal tools',
-    title: 'React dashboard with Firebase',
+    tag: 'Website build',
+    title: 'Florida service-business website',
     description:
-      'A fast app shell with auth-ready structure, clean UI patterns, useful data views, and room to grow into a full product.',
+      'A modern website organized around services, locations, proof, local search, mobile speed, and a simple path to contact the business.',
   },
   {
-    tag: 'Growth systems',
-    title: 'Marketing audit + automation map',
+    tag: 'Mobile product',
+    title: 'iOS app or business portal',
     description:
-      'A clear growth plan that reviews the offer, page copy, traffic path, follow-up workflow, and reporting gaps before money is spent on ads.',
+      'A polished mobile experience for bookings, customer accounts, notifications, internal workflows, dashboards, or an MVP launch.',
   },
 ] as const;
 
 export const packages = [
   {
-    name: 'Marketing Audit + Growth Map',
+    name: 'SEO + GEO Visibility Audit',
     price: '$750',
     cadence: 'one-time',
     description:
-      'A high-value review for businesses that need clarity before rebuilding a site, running ads, or launching a new offer.',
+      'A practical review of your website, local search presence, AI-search readiness, content gaps, and lead path.',
     features: [
-      'Website and landing page audit',
-      'Offer and copy recommendations',
-      'Lead path and follow-up review',
-      '30-day action plan with priorities',
+      'Technical and on-page SEO review',
+      'Local visibility and competitor gaps',
+      'GEO / AI-search content review',
+      'Prioritized 30-day action plan',
     ],
     cta: 'Request an audit',
     featured: false,
   },
   {
-    name: 'Conversion Landing Page Sprint',
+    name: 'Landing Page Sprint',
     price: '$2,500–$4,500',
     cadence: 'per project',
     description:
-      'A premium landing page built to turn traffic into booked calls, form leads, or WhatsApp conversations.',
+      'A conversion-focused page for a service, campaign, offer, or location that needs more calls, forms, or bookings.',
     features: [
-      'React + TypeScript landing page',
-      'Conversion-focused copy structure',
-      'Mobile-first UX and performance pass',
-      'Netlify form or WhatsApp lead capture',
+      'Strategy, wireframe, copy structure',
+      'React + TypeScript development',
+      'Mobile speed and conversion pass',
+      'Form, call, or WhatsApp lead path',
     ],
     cta: 'Build my landing page',
     featured: false,
   },
   {
-    name: 'Full-Stack React App Build',
-    price: '$6,500–$18,000+',
+    name: 'SEO-Ready Business Website',
+    price: '$5,500–$12,000+',
     cadence: 'per project',
     description:
-      'For founders and businesses that need a real app, dashboard, MVP, or client portal instead of another basic website.',
+      'A full website built around your services, target cities, proof, search visibility, and lead-generation goals.',
     features: [
-      'React, TypeScript, Tailwind CSS',
-      'Node.js and Firebase architecture',
-      'Reusable components and clean routes',
-      'Launch support and documentation',
+      'Service and location architecture',
+      'SEO + GEO-ready page structure',
+      'Responsive React development',
+      'Analytics, forms, and launch support',
     ],
-    cta: 'Scope an app build',
+    cta: 'Plan my website',
     featured: true,
   },
   {
-    name: 'Premium Growth Retainer',
-    price: '$3,500–$8,000',
-    cadence: 'per month',
+    name: 'iOS App or Mobile MVP',
+    price: 'Custom quote',
+    cadence: 'based on scope',
     description:
-      'Ongoing marketing and development support for businesses that want steady testing, shipping, and optimization.',
+      'For businesses that need a mobile product, client portal, booking tool, dashboard, or internal workflow.',
     features: [
-      'Monthly landing page or app improvements',
-      'Campaign and copy support',
-      'Automation and reporting updates',
-      'Weekly strategy check-in',
+      'Product scope and user-flow planning',
+      'SwiftUI or React Native build',
+      'Firebase or API integration',
+      'Testing, launch, and documentation',
     ],
-    cta: 'Start a retainer',
+    cta: 'Scope an app build',
     featured: false,
   },
 ] as const;
 
 export const process = [
   {
-    title: 'Diagnose',
+    title: 'Research',
     description:
-      'We review the offer, audience, current website, lead path, and the one action that matters most.',
+      'I review the market, searches, competitors, locations, customer questions, current website, and business goals.',
   },
   {
-    title: 'Position',
+    title: 'Plan',
     description:
-      'I shape the message, page structure, service promise, and content angles before design starts.',
+      'We define the page structure, target keywords, content, user path, design direction, and the action visitors should take.',
   },
   {
     title: 'Build',
     description:
-      'I develop a clean React experience with responsive UI, fast sections, connected forms, and polished details.',
+      'I create the website, landing page, or app with responsive design, clean code, strong content structure, and connected lead paths.',
   },
   {
-    title: 'Optimize',
+    title: 'Improve',
     description:
-      'After launch, we use feedback and data to improve copy, calls to action, reporting, and automation.',
+      'After launch, we use search data, user behavior, and business feedback to improve visibility and conversion over time.',
   },
 ] as const;

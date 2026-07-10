@@ -1,20 +1,22 @@
 import { motion } from 'framer-motion';
 import {
   ArrowRight,
-  BarChart3,
+  Bot,
   BriefcaseBusiness,
   Check,
   Code2,
   Gauge,
+  Globe2,
   Layers3,
   Mail,
   MapPin,
   Menu,
   MessageCircle,
-  MousePointer2,
-  PenLine,
+  PanelsTopLeft,
   Rocket,
+  Search,
   ShieldCheck,
+  Smartphone,
   Sparkles,
   Target,
   TrendingUp,
@@ -29,6 +31,7 @@ import {
   buildTypes,
   contact,
   heroBadges,
+  growthOutcomes,
   metrics,
   navItems,
   packages,
@@ -43,10 +46,11 @@ const fadeUp = {
   show: { opacity: 1, y: 0 },
 };
 
-const serviceIcons = [MousePointer2, Code2, PenLine, BarChart3];
+const serviceIcons = [Search, Bot, PanelsTopLeft, Globe2, Smartphone];
 const pillarIcons = [Target, Layers3, Zap];
-const metricIcons = [Gauge, ShieldCheck, TrendingUp];
-const processIcons = [Target, Sparkles, Code2, Rocket];
+const metricIcons = [Search, TrendingUp, MapPin];
+const processIcons = [Search, Target, Code2, Rocket];
+const growthIcons = [Search, Bot, Target, ShieldCheck, Smartphone];
 
 const image = '/images/valdemir-profile.webp';
 const smallImage = '/images/valdemir-profile-small.webp';
@@ -56,7 +60,7 @@ export default function App() {
 
   const whatsappMessage = useMemo(
     () =>
-      'Hi Valdemir, I saw your portfolio and would like to talk about a marketing or React app project.',
+      'Hi Valdemir, I saw your portfolio and would like to talk about SEO, GEO, a website, landing page, or iOS app project.',
     []
   );
 
@@ -102,7 +106,7 @@ export default function App() {
 
         <div className="headerActions">
           <a className="headerCta" href={whatsappHref} target="_blank" rel="noreferrer">
-            Book a call
+            Free site review
           </a>
 
           <button
@@ -151,7 +155,7 @@ export default function App() {
 
             <a className="mobileMenuCta" href={whatsappHref} target="_blank" rel="noreferrer">
               <MessageCircle size={18} />
-              Talk on WhatsApp
+              Request a free review
             </a>
           </motion.nav>
         </div>
@@ -166,22 +170,23 @@ export default function App() {
             animate="show"
             transition={{ duration: 0.65 }}
           >
-            <span className="eyebrow">Marketing + React Development</span>
+            <span className="eyebrow">SEO + GEO + Web & iOS Development</span>
 
-            <h1>Premium websites and React apps built to turn clicks into real leads.</h1>
+            <h1>Get found on Google and AI search. Turn that attention into real leads.</h1>
 
             <p>
-              I help businesses launch fast websites, high-converting landing pages, dashboards,
-              and full-stack React apps with a clear marketing strategy behind every screen.
+              I build search-ready websites, high-converting landing pages, and iOS apps for
+              Florida businesses. The strategy connects SEO, GEO, design, content, and development
+              around one goal: more qualified calls, bookings, and customers.
             </p>
 
             <div className="heroActions">
               <a href={whatsappHref} target="_blank" rel="noreferrer" className="primaryButton">
-                Start a project <ArrowRight size={18} />
+                Get a free site review <ArrowRight size={18} />
               </a>
 
-              <a href="#pricing" className="secondaryButton">
-                See pricing <Sparkles size={17} />
+              <a href="#growth" className="secondaryButton">
+                See how I help <TrendingUp size={17} />
               </a>
             </div>
 
@@ -205,17 +210,23 @@ export default function App() {
 
               <div className="liveBadge">
                 <span />
-                Available for select projects
+                South Florida · Available now
               </div>
 
-              <div className="heroMiniCard topMiniCard">
-                <strong>React</strong>
-                <p>Fast app UI</p>
+              <div className="heroMiniCard topMiniCard searchMiniCard">
+                <Search size={18} />
+                <div>
+                  <strong>Google</strong>
+                  <p>Local visibility</p>
+                </div>
               </div>
 
-              <div className="heroMiniCard bottomMiniCard">
-                <strong>CRO</strong>
-                <p>Clear lead path</p>
+              <div className="heroMiniCard bottomMiniCard searchMiniCard">
+                <Bot size={18} />
+                <div>
+                  <strong>AI Search</strong>
+                  <p>GEO-ready content</p>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -264,15 +275,16 @@ export default function App() {
           >
             <span className="eyebrow">About Valdemir</span>
 
-            <h2>Developer thinking meets marketing thinking.</h2>
+            <h2>Search strategy, conversion design, and development in one place.</h2>
 
             <p>
-              Most sites look fine but don’t explain the offer, build trust, or make it easy to
-              take action. My work brings the marketing and the code together, so your page, app,
-              copy, forms, and follow-up all support the same goal: more qualified conversations.
+              A website shouldn’t only look professional. It should clearly explain what you do,
+              help search engines and AI systems understand the business, build trust, and make the
+              next step easy. I bring SEO, GEO, landing-page strategy, web development, and mobile
+              product skills together so each part supports the same growth goal.
             </p>
 
-            <div className="stackWrap" aria-label="Technical stack">
+            <div className="stackWrap" aria-label="Skills and technical stack">
               {stack.map((item) => (
                 <span key={item}>{item}</span>
               ))}
@@ -310,11 +322,11 @@ export default function App() {
         <section className="servicesSection sectionContainer" id="services">
           <SectionHeading
             eyebrow="Services"
-            title="What I can build and improve for your business"
-            subtitle="The offer is built around high-income freelance services: landing pages, copy, automation, data reporting, and custom React development."
+            title="A complete search-to-lead growth system"
+            subtitle="Choose one focused project or combine SEO, GEO, landing pages, websites, and mobile development into a larger growth plan."
           />
 
-          <div className="cardGrid fourGrid">
+          <div className="cardGrid servicesGrid">
             {services.map((service, index) => {
               const Icon = serviceIcons[index];
 
@@ -335,8 +347,8 @@ export default function App() {
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
 
-                  <a href="#pricing" aria-label={`${service.title} pricing`}>
-                    View pricing <ArrowRight size={16} />
+                  <a href="#contact" aria-label={`Ask about ${service.title}`}>
+                    Ask about this service <ArrowRight size={16} />
                   </a>
                 </motion.article>
               );
@@ -344,13 +356,60 @@ export default function App() {
           </div>
         </section>
 
-        <section className="buildTypesSection sectionContainer" id="work">
+        <section className="growthSection sectionContainer" id="growth">
           <SectionHeading
-            eyebrow="Project Types"
-            title="Built for buyers who care about speed, clarity, and leads"
+            eyebrow="How I help businesses grow"
+            title="From getting discovered to winning the customer"
+            subtitle="I connect search visibility, clear messaging, strong design, and reliable development so your digital presence does more than look good."
           />
 
-          <div className="projectGrid">
+          <div className="growthGrid">
+            {growthOutcomes.map((outcome, index) => {
+              const Icon = growthIcons[index];
+
+              return (
+                <motion.article
+                  className="growthCard"
+                  key={outcome.title}
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: (index % 3) * 0.05 }}
+                >
+                  <span className="growthIcon"><Icon size={22} /></span>
+                  <h3>{outcome.title}</h3>
+                  <p>{outcome.description}</p>
+                  <div className="growthImpact">
+                    <strong>Business impact</strong>
+                    <span>{outcome.impact}</span>
+                  </div>
+                </motion.article>
+              );
+            })}
+          </div>
+
+          <div className="growthCta">
+            <div>
+              <Sparkles size={24} />
+              <div>
+                <strong>Not sure which service makes sense?</strong>
+                <p>I’ll review where you are now and help you choose the right next step.</p>
+              </div>
+            </div>
+            <a href={whatsappHref} target="_blank" rel="noreferrer">
+              Talk about your goals <ArrowRight size={16} />
+            </a>
+          </div>
+        </section>
+
+        <section className="buildTypesSection sectionContainer" id="work">
+          <SectionHeading
+            eyebrow="What I build"
+            title="Digital assets made to get found, earn trust, and drive action"
+          />
+
+          <div className="projectGrid projectGridFour">
             {buildTypes.map((project, index) => (
               <motion.article
                 className={`projectCard project${index + 1}`}
@@ -376,9 +435,9 @@ export default function App() {
 
         <section className="pricingSection sectionContainer" id="pricing">
           <SectionHeading
-            eyebrow="Services & Pricing"
-            title="Value-based packages for serious growth work"
-            subtitle="Pricing is set to support profitable work, clear scope, and better outcomes. Final quotes depend on complexity, timeline, integrations, and content needs."
+            eyebrow="Services & pricing"
+            title="Clear starting points for serious growth work"
+            subtitle="Final quotes depend on scope, number of pages, content needs, integrations, timeline, and the condition of your current website."
           />
 
           <div className="packageGrid">
@@ -392,7 +451,7 @@ export default function App() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: index * 0.07 }}
               >
-                {pack.featured && <span className="popularBadge">Best for app builds</span>}
+                {pack.featured && <span className="popularBadge">Best for a full rebuild</span>}
 
                 <h3>{pack.name}</h3>
 
@@ -426,7 +485,10 @@ export default function App() {
         </section>
 
         <section className="processSection sectionContainer" id="process">
-          <SectionHeading eyebrow="Process" title="A simple path from idea to launched asset" />
+          <SectionHeading
+            eyebrow="Process"
+            title="From search opportunity to launched growth asset"
+          />
 
           <div className="processGrid">
             {process.map((step, index) => {
@@ -455,12 +517,12 @@ export default function App() {
 
         <section className="ctaBand sectionContainer" aria-label="Call to action">
           <div>
-            <span className="eyebrow">Ready to build?</span>
-            <h2>Let’s turn your offer into a page, app, or system people can actually act on.</h2>
+            <span className="eyebrow">Free website review</span>
+            <h2>Find out what’s blocking your Google visibility, AI-search presence, and lead conversion.</h2>
           </div>
 
           <a className="primaryButton" href={whatsappHref} target="_blank" rel="noreferrer">
-            Message me on WhatsApp <MessageCircle size={18} />
+            Request my free review <ShieldCheck size={18} />
           </a>
         </section>
       </main>
@@ -469,11 +531,11 @@ export default function App() {
         <div className="footerBrand">
           <Logo />
 
-          <h2>Tell me what you’re trying to build.</h2>
+          <h2>Tell me what you want to grow or build.</h2>
 
           <p>
-            Send the goal, the current website or app if you have one, and what you want visitors
-            or users to do. I’ll help you choose the right next step.
+            Send your current website, target service or location, and the result you want. I’ll
+            help you choose the right next step across SEO, GEO, landing pages, websites, or iOS.
           </p>
 
           <div className="footerSocials">
@@ -512,9 +574,9 @@ export default function App() {
         </div>
 
         <div className="contactFormBox">
-          <h3>Project inquiry</h3>
+          <h3>Request a free website review</h3>
 
-          <p>This form is ready for Netlify Forms after deployment.</p>
+          <p>Share a few details and I’ll review the best starting point for your business.</p>
 
           <form
             name="project-inquiry"
@@ -535,16 +597,33 @@ export default function App() {
 
             <input aria-label="Email" name="email" type="email" placeholder="Your email" required />
 
+            <input
+              aria-label="Current website"
+              name="website"
+              type="url"
+              placeholder="Current website (optional)"
+            />
+
+            <select aria-label="Service needed" name="service" defaultValue="">
+              <option value="" disabled>What do you need?</option>
+              <option>SEO + Local SEO</option>
+              <option>GEO / AI Search</option>
+              <option>Landing Page</option>
+              <option>Business Website</option>
+              <option>iOS App</option>
+              <option>Not sure yet</option>
+            </select>
+
             <textarea
               aria-label="Project details"
               name="message"
-              placeholder="What do you need built or improved?"
+              placeholder="What service, location, or business goal should I review?"
               rows={4}
               required
             />
 
             <button type="submit">
-              Send inquiry <ArrowRight size={18} />
+              Send review request <ArrowRight size={18} />
             </button>
           </form>
         </div>

@@ -7,9 +7,10 @@
   <circle cx="1010" cy="90" r="220" fill="#38bdf8" opacity="0.12"/>
   <circle cx="940" cy="530" r="260" fill="#8b5cf6" opacity="0.14"/>
   <rect x="80" y="80" width="1040" height="470" rx="44" fill="#ffffff" opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
-  <text x="120" y="205" fill="#72f7d5" font-size="30" font-family="Inter,Arial" font-weight="700" letter-spacing="5">MARKETING + REACT APP DEVELOPMENT</text>
-  <text x="120" y="320" fill="#fff" font-size="78" font-family="Georgia,serif" font-weight="700">Valdemir R. Gonçalves Junior</text>
-  <text x="120" y="390" fill="#cbd5e1" font-size="34" font-family="Inter,Arial">Conversion-first websites, full-stack apps, and growth systems.</text>
-  <rect x="120" y="455" width="310" height="64" rx="32" fill="url(#b)"/>
-  <text x="155" y="497" fill="#04111d" font-size="24" font-family="Inter,Arial" font-weight="800">Book a project call</text>
+  <text x="120" y="190" fill="#72f7d5" font-size="28" font-family="Inter,Arial" font-weight="700" letter-spacing="4">SEO + GEO + WEB &amp; iOS DEVELOPMENT</text>
+  <text x="120" y="300" fill="#fff" font-size="72" font-family="Georgia,serif" font-weight="700">Valdemir Junior</text>
+  <text x="120" y="370" fill="#cbd5e1" font-size="31" font-family="Inter,Arial">Get found on Google and AI search.</text>
+  <text x="120" y="414" fill="#cbd5e1" font-size="31" font-family="Inter,Arial">Turn that visibility into real leads.</text>
+  <rect x="120" y="470" width="390" height="64" rx="32" fill="url(#b)"/>
+  <text x="155" y="512" fill="#04111d" font-size="24" font-family="Inter,Arial" font-weight="800">Florida growth specialist</text>
 </svg>

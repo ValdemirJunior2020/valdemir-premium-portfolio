@@ -548,6 +548,7 @@ svg {
 
 .aboutSection,
 .servicesSection,
+.growthSection,
 .buildTypesSection,
 .pricingSection,
 .processSection,
@@ -943,6 +944,7 @@ svg {
 }
 
 .contactFormBox input,
+.contactFormBox select,
 .contactFormBox textarea {
   width: 100%;
   border: 1px solid var(--line);
@@ -955,6 +957,7 @@ svg {
 }
 
 .contactFormBox input:focus,
+.contactFormBox select:focus,
 .contactFormBox textarea:focus {
   border-color: rgba(114, 247, 213, 0.7);
   box-shadow: 0 0 0 4px rgba(114, 247, 213, 0.1);
@@ -1354,5 +1357,184 @@ svg {
 
   .fakeLogoCard strong {
     font-size: 0.95rem;
+  }
+}
+
+/* SEO + GEO portfolio additions */
+.searchMiniCard {
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.searchMiniCard > svg {
+  flex: 0 0 auto;
+  color: var(--cyan);
+}
+
+.searchMiniCard > div {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.servicesGrid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 215px), 1fr));
+}
+
+.tone5 {
+  background: linear-gradient(135deg, #c4b5fd, #f472b6);
+}
+
+.growthGrid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.growthCard {
+  display: grid;
+  align-content: start;
+  gap: 0.85rem;
+  min-height: 100%;
+  padding: 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035)),
+    rgba(4, 17, 29, 0.44);
+  box-shadow: 0 14px 42px rgba(0, 0, 0, 0.14);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.growthCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(114, 247, 213, 0.34);
+  background:
+    linear-gradient(145deg, rgba(114, 247, 213, 0.09), rgba(56, 189, 248, 0.035)),
+    rgba(4, 17, 29, 0.54);
+}
+
+.growthIcon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(114, 247, 213, 0.24);
+  border-radius: 14px;
+  color: var(--cyan);
+  background: rgba(114, 247, 213, 0.08);
+}
+
+.growthCard h3 {
+  margin: 0;
+  color: var(--ink-strong);
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.growthCard p {
+  margin: 0;
+  color: var(--muted-strong);
+  font-size: 0.9rem;
+  line-height: 1.62;
+}
+
+.growthImpact {
+  display: grid;
+  gap: 0.3rem;
+  margin-top: auto;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.growthImpact strong {
+  color: var(--cyan);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.growthCta {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(114, 247, 213, 0.26);
+  border-radius: 22px;
+  background: rgba(114, 247, 213, 0.065);
+}
+
+.growthCta > div {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.growthCta > div > svg {
+  flex: 0 0 auto;
+  color: var(--cyan);
+}
+
+.growthCta strong {
+  color: var(--ink-strong);
+}
+
+.growthCta p {
+  margin: 0.15rem 0 0;
+  color: var(--muted-strong);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.growthCta > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: fit-content;
+  color: var(--cyan);
+  font-weight: 900;
+}
+
+.project4::before {
+  background: rgba(244, 114, 182, 0.14);
+}
+
+.contactFormBox select {
+  appearance: none;
+  cursor: pointer;
+  color: var(--muted-strong);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 2px),
+    calc(100% - 13px) calc(50% - 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.contactFormBox select option {
+  color: #071827;
+}
+
+@media (min-width: 620px) {
+  .growthGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .growthCta {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+@media (min-width: 960px) {
+  .growthGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .projectGridFour {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

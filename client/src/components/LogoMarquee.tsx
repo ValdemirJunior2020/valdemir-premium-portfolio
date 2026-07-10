@@ -1,61 +1,29 @@
-const fantasyBrands = [
-  {
-    initials: 'NX',
-    name: 'NexaFlow',
-    colorClass: 'logoColor1',
-  },
-  {
-    initials: 'BR',
-    name: 'BrightReach',
-    colorClass: 'logoColor2',
-  },
-  {
-    initials: 'VL',
-    name: 'Vista Leads',
-    colorClass: 'logoColor3',
-  },
-  {
-    initials: 'PX',
-    name: 'PixelGrowth',
-    colorClass: 'logoColor4',
-  },
-  {
-    initials: 'LM',
-    name: 'LeadMint',
-    colorClass: 'logoColor5',
-  },
-  {
-    initials: 'SK',
-    name: 'ScaleKit',
-    colorClass: 'logoColor6',
-  },
-  {
-    initials: 'TR',
-    name: 'TrustRoute',
-    colorClass: 'logoColor7',
-  },
-  {
-    initials: 'AD',
-    name: 'AdPilot',
-    colorClass: 'logoColor8',
-  },
+const focusAreas = [
+  { initials: 'SEO', name: 'Local Search', colorClass: 'logoColor1' },
+  { initials: 'GEO', name: 'AI Search', colorClass: 'logoColor2' },
+  { initials: 'LP', name: 'Landing Pages', colorClass: 'logoColor3' },
+  { initials: 'WEB', name: 'Business Websites', colorClass: 'logoColor4' },
+  { initials: 'iOS', name: 'Mobile Apps', colorClass: 'logoColor5' },
+  { initials: 'CRO', name: 'Lead Conversion', colorClass: 'logoColor6' },
+  { initials: 'FL', name: 'Florida Markets', colorClass: 'logoColor7' },
+  { initials: 'DEV', name: 'React + SwiftUI', colorClass: 'logoColor8' },
 ];
 
 export function LogoMarquee() {
-  const brands = [...fantasyBrands, ...fantasyBrands];
+  const items = [...focusAreas, ...focusAreas];
 
   return (
-    <section className="logoMarqueeSection" aria-label="Example brand styles">
+    <section className="logoMarqueeSection" aria-label="Core services and specialties">
       <div className="sectionContainer">
-        <p className="logoMarqueeLabel">Built for brands that want better leads</p>
+        <p className="logoMarqueeLabel">One strategy from search visibility to conversion</p>
       </div>
 
       <div className="logoMarquee" aria-hidden="true">
         <div className="logoMarqueeTrack">
-          {brands.map((brand, index) => (
-            <div className={`fakeLogoCard ${brand.colorClass}`} key={`${brand.name}-${index}`}>
-              <span>{brand.initials}</span>
-              <strong>{brand.name}</strong>
+          {items.map((item, index) => (
+            <div className={`fakeLogoCard ${item.colorClass}`} key={`${item.name}-${index}`}>
+              <span>{item.initials}</span>
+              <strong>{item.name}</strong>
             </div>
           ))}
         </div>
