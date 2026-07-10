@@ -10,7 +10,8 @@ export const contact = {
   phoneDisplay: '(754) 366-9922',
   whatsappNumber: '5616445874',
   linkedin: 'https://www.linkedin.com/in/valdemir-c',
-  instagram: 'https://www.instagram.com/valdemir_junior_goncalves/?hl=en',
+  instagram:
+    'https://www.instagram.com/valdemir_junior_goncalves/?hl=en',
 };
 
 export const navItems = [
@@ -80,7 +81,7 @@ export const services = [
   {
     title: 'High-Converting Landing Pages',
     description:
-      'Fast, focused landing pages for Google Ads, Meta campaigns, promotions, lead generation, bookings, calls, and WhatsApp conversations.',
+      'Fast, focused landing pages for Google Ads, Meta campaigns, promotions, lead generation, quote requests, calls, and WhatsApp conversations.',
   },
   {
     title: 'Business Website Development',
@@ -90,7 +91,7 @@ export const services = [
   {
     title: 'iOS App Development',
     description:
-      'Custom iPhone apps, mobile portals, booking tools, dashboards, and MVPs built with SwiftUI or React Native for businesses that need more than a website.',
+      'Custom iPhone apps, mobile portals, customer tools, dashboards, and MVPs built with SwiftUI or React Native for businesses that need more than a website.',
   },
 ] as const;
 
@@ -98,7 +99,7 @@ export const growthOutcomes = [
   {
     title: 'Get found by local customers',
     description:
-      'SEO and local search improvements help the right people find your business when they are ready to call, book, or request a quote.',
+      'SEO and local search improvements help the right people find your business when they are ready to call, contact you, or request a quote.',
     impact: 'More qualified traffic from Google and local search',
   },
   {
@@ -111,7 +112,7 @@ export const growthOutcomes = [
     title: 'Turn clicks into real leads',
     description:
       'Focused landing pages guide visitors toward one clear action with strong offers, trust signals, fast forms, calls, and WhatsApp.',
-    impact: 'More calls, bookings, quote requests, and conversations',
+    impact: 'More calls, quote requests, leads, and conversations',
   },
   {
     title: 'Build trust with a better website',
@@ -122,7 +123,7 @@ export const growthOutcomes = [
   {
     title: 'Bring your service to mobile',
     description:
-      'Custom iOS apps and mobile tools can support bookings, customer accounts, notifications, internal workflows, and new digital products.',
+      'Custom iOS apps and mobile tools can support customer accounts, notifications, internal workflows, dashboards, and new digital products.',
     impact: 'A useful mobile experience built around your business goals',
   },
 ] as const;
@@ -136,7 +137,7 @@ export const buildTypes = [
   },
   {
     tag: 'Lead generation',
-    title: 'Landing page for calls and bookings',
+    title: 'Landing page for calls and leads',
     description:
       'A fast page with a clear offer, trust sections, service proof, FAQs, call tracking, forms, and WhatsApp lead capture.',
   },
@@ -150,7 +151,7 @@ export const buildTypes = [
     tag: 'Mobile product',
     title: 'iOS app or business portal',
     description:
-      'A polished mobile experience for bookings, customer accounts, notifications, internal workflows, dashboards, or an MVP launch.',
+      'A polished mobile experience for customer accounts, notifications, internal workflows, dashboards, service tools, or an MVP launch.',
   },
 ] as const;
 
@@ -175,7 +176,7 @@ export const packages = [
     price: '$2,500–$4,500',
     cadence: 'per project',
     description:
-      'A conversion-focused page for a service, campaign, offer, or location that needs more calls, forms, or bookings.',
+      'A conversion-focused page for a service, campaign, offer, or location that needs more calls, forms, or quote requests.',
     features: [
       'Strategy, wireframe, copy structure',
       'React + TypeScript development',
@@ -205,7 +206,7 @@ export const packages = [
     price: 'Custom quote',
     cadence: 'based on scope',
     description:
-      'For businesses that need a mobile product, client portal, booking tool, dashboard, or internal workflow.',
+      'For businesses that need a mobile product, client portal, customer tool, dashboard, or internal workflow.',
     features: [
       'Product scope and user-flow planning',
       'SwiftUI or React Native build',
