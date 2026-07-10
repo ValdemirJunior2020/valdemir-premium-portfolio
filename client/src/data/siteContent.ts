@@ -8,9 +8,9 @@ export const contact = {
   location: 'South Florida · Available across Florida and remotely',
   email: 'infojr.83@gmail.com',
   phoneDisplay: '(754) 366-9922',
-  whatsappNumber: '17543669922',
-  linkedin: 'https://linkedin.com/',
-  instagram: 'https://instagram.com/',
+  whatsappNumber: '5616445874',
+  linkedin: 'https://www.linkedin.com/in/valdemir-c',
+  instagram: 'https://www.instagram.com/valdemir_junior_goncalves/?hl=en',
 };
 
 export const navItems = [
