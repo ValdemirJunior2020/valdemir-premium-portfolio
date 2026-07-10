@@ -177,7 +177,7 @@ export default function App() {
             <p>
               I build search-ready websites, high-converting landing pages, and iOS apps for
               Florida businesses. The strategy connects SEO, GEO, design, content, and development
-              around one goal: more qualified calls, bookings, and customers.
+              around one goal: more qualified calls and customers.
             </p>
 
             <div className="heroActions">
