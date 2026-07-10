@@ -3,9 +3,9 @@ import {
   ArrowRight,
   Bot,
   BriefcaseBusiness,
+  Building2,
   Check,
   Code2,
-  Gauge,
   Globe2,
   Layers3,
   Mail,
@@ -46,11 +46,27 @@ const fadeUp = {
   show: { opacity: 1, y: 0 },
 };
 
-const serviceIcons = [Search, Bot, PanelsTopLeft, Globe2, Smartphone];
+const serviceIcons = [
+  Search,
+  Bot,
+  PanelsTopLeft,
+  Globe2,
+  Building2,
+  Smartphone,
+];
+
 const pillarIcons = [Target, Layers3, Zap];
 const metricIcons = [Search, TrendingUp, MapPin];
 const processIcons = [Search, Target, Code2, Rocket];
-const growthIcons = [Search, Bot, Target, ShieldCheck, Smartphone];
+
+const growthIcons = [
+  Search,
+  Bot,
+  Target,
+  Building2,
+  ShieldCheck,
+  Smartphone,
+];
 
 const image = '/images/valdemir-profile.webp';
 const smallImage = '/images/valdemir-profile-small.webp';
@@ -60,7 +76,7 @@ export default function App() {
 
   const whatsappMessage = useMemo(
     () =>
-      'Hi Valdemir, I saw your portfolio and would like to talk about SEO, GEO, a website, landing page, or iOS app project.',
+      'Hi Valdemir, I saw your portfolio and would like to talk about SEO, GEO, a website, landing page, real estate website, or iOS app project.',
     []
   );
 
@@ -105,7 +121,12 @@ export default function App() {
         </nav>
 
         <div className="headerActions">
-          <a className="headerCta" href={whatsappHref} target="_blank" rel="noreferrer">
+          <a
+            className="headerCta"
+            href={whatsappHref}
+            target="_blank"
+            rel="noreferrer"
+          >
             Free site review
           </a>
 
@@ -146,14 +167,23 @@ export default function App() {
 
             <div className="mobileMenuLinks">
               {navItems.map((item) => (
-                <a key={item.target} href={`#${item.target}`} onClick={closeMobileMenu}>
+                <a
+                  key={item.target}
+                  href={`#${item.target}`}
+                  onClick={closeMobileMenu}
+                >
                   {item.label}
                   <ArrowRight size={16} />
                 </a>
               ))}
             </div>
 
-            <a className="mobileMenuCta" href={whatsappHref} target="_blank" rel="noreferrer">
+            <a
+              className="mobileMenuCta"
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+            >
               <MessageCircle size={18} />
               Request a free review
             </a>
@@ -170,18 +200,29 @@ export default function App() {
             animate="show"
             transition={{ duration: 0.65 }}
           >
-            <span className="eyebrow">SEO + GEO + Web & iOS Development</span>
+            <span className="eyebrow">
+              SEO + GEO + Web & iOS Development
+            </span>
 
-            <h1>Get found on Google and AI search. Turn that attention into real leads.</h1>
+            <h1>
+              Get found on Google and AI search. Turn that attention into real
+              leads.
+            </h1>
 
             <p>
-              I build search-ready websites, high-converting landing pages, and iOS apps for
-              Florida businesses. The strategy connects SEO, GEO, design, content, and development
+              I build search-ready websites, high-converting landing pages,
+              real estate websites, and iOS apps for Florida businesses. The
+              strategy connects SEO, GEO, design, content, and development
               around one goal: more qualified calls and customers.
             </p>
 
             <div className="heroActions">
-              <a href={whatsappHref} target="_blank" rel="noreferrer" className="primaryButton">
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="primaryButton"
+              >
                 Get a free site review <ArrowRight size={18} />
               </a>
 
@@ -205,7 +246,11 @@ export default function App() {
           >
             <div className="heroCard">
               <div className="portraitFrame">
-                <img src={image} alt="Valdemir R. Gonçalves Junior" loading="eager" />
+                <img
+                  src={image}
+                  alt="Valdemir R. Gonçalves Junior"
+                  loading="eager"
+                />
               </div>
 
               <div className="liveBadge">
@@ -234,9 +279,12 @@ export default function App() {
 
         <LogoMarquee />
 
-        <section className="metricsStrip sectionContainer" aria-label="Portfolio strengths">
+        <section
+          className="metricsStrip sectionContainer"
+          aria-label="Portfolio strengths"
+        >
           {metrics.map(([value, label], index) => {
-            const Icon = metricIcons[index];
+            const Icon = metricIcons[index] ?? TrendingUp;
 
             return (
               <div className="metricItem" key={label}>
@@ -257,7 +305,11 @@ export default function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
           >
-            <img src={smallImage} alt="Valdemir smiling in a suit" loading="lazy" />
+            <img
+              src={smallImage}
+              alt="Valdemir smiling in a suit"
+              loading="lazy"
+            />
 
             <div>
               <strong>{contact.name}</strong>
@@ -275,13 +327,17 @@ export default function App() {
           >
             <span className="eyebrow">About Valdemir</span>
 
-            <h2>Search strategy, conversion design, and development in one place.</h2>
+            <h2>
+              Search strategy, conversion design, and development in one place.
+            </h2>
 
             <p>
-              A website shouldn’t only look professional. It should clearly explain what you do,
-              help search engines and AI systems understand the business, build trust, and make the
-              next step easy. I bring SEO, GEO, landing-page strategy, web development, and mobile
-              product skills together so each part supports the same growth goal.
+              A website shouldn’t only look professional. It should clearly
+              explain what you do, help search engines and AI systems understand
+              the business, build trust, and make the next step easy. I bring
+              SEO, GEO, landing-page strategy, web development, and mobile
+              product skills together so each part supports the same growth
+              goal.
             </p>
 
             <div className="stackWrap" aria-label="Skills and technical stack">
@@ -293,7 +349,7 @@ export default function App() {
 
           <div className="pillarList">
             {pillars.map((pillar, index) => {
-              const Icon = pillarIcons[index];
+              const Icon = pillarIcons[index] ?? Target;
 
               return (
                 <motion.article
@@ -323,12 +379,12 @@ export default function App() {
           <SectionHeading
             eyebrow="Services"
             title="A complete search-to-lead growth system"
-            subtitle="Choose one focused project or combine SEO, GEO, landing pages, websites, and mobile development into a larger growth plan."
+            subtitle="Choose one focused project or combine SEO, GEO, landing pages, websites, real estate websites, and mobile development into a larger growth plan."
           />
 
           <div className="cardGrid servicesGrid">
             {services.map((service, index) => {
-              const Icon = serviceIcons[index];
+              const Icon = serviceIcons[index] ?? Globe2;
 
               return (
                 <motion.article
@@ -347,7 +403,10 @@ export default function App() {
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
 
-                  <a href="#contact" aria-label={`Ask about ${service.title}`}>
+                  <a
+                    href="#contact"
+                    aria-label={`Ask about ${service.title}`}
+                  >
                     Ask about this service <ArrowRight size={16} />
                   </a>
                 </motion.article>
@@ -365,7 +424,7 @@ export default function App() {
 
           <div className="growthGrid">
             {growthOutcomes.map((outcome, index) => {
-              const Icon = growthIcons[index];
+              const Icon = growthIcons[index] ?? TrendingUp;
 
               return (
                 <motion.article
@@ -375,11 +434,18 @@ export default function App() {
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: (index % 3) * 0.05 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: (index % 3) * 0.05,
+                  }}
                 >
-                  <span className="growthIcon"><Icon size={22} /></span>
+                  <span className="growthIcon">
+                    <Icon size={22} />
+                  </span>
+
                   <h3>{outcome.title}</h3>
                   <p>{outcome.description}</p>
+
                   <div className="growthImpact">
                     <strong>Business impact</strong>
                     <span>{outcome.impact}</span>
@@ -394,9 +460,13 @@ export default function App() {
               <Sparkles size={24} />
               <div>
                 <strong>Not sure which service makes sense?</strong>
-                <p>I’ll review where you are now and help you choose the right next step.</p>
+                <p>
+                  I’ll review where you are now and help you choose the right
+                  next step.
+                </p>
               </div>
             </div>
+
             <a href={whatsappHref} target="_blank" rel="noreferrer">
               Talk about your goals <ArrowRight size={16} />
             </a>
@@ -443,7 +513,9 @@ export default function App() {
           <div className="packageGrid">
             {packages.map((pack, index) => (
               <motion.article
-                className={`packageCard ${pack.featured ? 'featuredPackage' : ''}`}
+                className={`packageCard ${
+                  pack.featured ? 'featuredPackage' : ''
+                }`}
                 key={pack.name}
                 variants={fadeUp}
                 initial="hidden"
@@ -451,7 +523,11 @@ export default function App() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: index * 0.07 }}
               >
-                {pack.featured && <span className="popularBadge">Best for a full rebuild</span>}
+                {pack.featured && (
+                  <span className="popularBadge">
+                    Best for a full rebuild
+                  </span>
+                )}
 
                 <h3>{pack.name}</h3>
 
@@ -471,7 +547,9 @@ export default function App() {
                 </ul>
 
                 <a
-                  href={`https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(
+                  href={`https://wa.me/${
+                    contact.whatsappNumber
+                  }?text=${encodeURIComponent(
                     `${pack.name}: ${whatsappMessage}`
                   )}`}
                   target="_blank"
@@ -492,7 +570,7 @@ export default function App() {
 
           <div className="processGrid">
             {process.map((step, index) => {
-              const Icon = processIcons[index];
+              const Icon = processIcons[index] ?? Rocket;
 
               return (
                 <motion.article
@@ -515,13 +593,24 @@ export default function App() {
           </div>
         </section>
 
-        <section className="ctaBand sectionContainer" aria-label="Call to action">
+        <section
+          className="ctaBand sectionContainer"
+          aria-label="Call to action"
+        >
           <div>
             <span className="eyebrow">Free website review</span>
-            <h2>Find out what’s blocking your Google visibility, AI-search presence, and lead conversion.</h2>
+            <h2>
+              Find out what’s blocking your Google visibility, AI-search
+              presence, and lead conversion.
+            </h2>
           </div>
 
-          <a className="primaryButton" href={whatsappHref} target="_blank" rel="noreferrer">
+          <a
+            className="primaryButton"
+            href={whatsappHref}
+            target="_blank"
+            rel="noreferrer"
+          >
             Request my free review <ShieldCheck size={18} />
           </a>
         </section>
@@ -534,12 +623,18 @@ export default function App() {
           <h2>Tell me what you want to grow or build.</h2>
 
           <p>
-            Send your current website, target service or location, and the result you want. I’ll
-            help you choose the right next step across SEO, GEO, landing pages, websites, or iOS.
+            Send your current website, target service or location, and the
+            result you want. I’ll help you choose the right next step across
+            SEO, GEO, landing pages, websites, real estate websites, or iOS.
           </p>
 
           <div className="footerSocials">
-            <a href={contact.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <a
+              href={contact.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+            >
               <BriefcaseBusiness size={20} />
             </a>
 
@@ -547,14 +642,23 @@ export default function App() {
               <Mail size={20} />
             </a>
 
-            <a href={whatsappHref} target="_blank" rel="noreferrer" aria-label="WhatsApp Valdemir">
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WhatsApp Valdemir"
+            >
               <MessageCircle size={20} />
             </a>
           </div>
         </div>
 
         <div className="footerDetails">
-          <img src={smallImage} alt="Valdemir R. Gonçalves Junior" loading="lazy" />
+          <img
+            src={smallImage}
+            alt="Valdemir R. Gonçalves Junior"
+            loading="lazy"
+          />
 
           <h3>{contact.name}</h3>
 
@@ -576,7 +680,10 @@ export default function App() {
         <div className="contactFormBox">
           <h3>Request a free website review</h3>
 
-          <p>Share a few details and I’ll review the best starting point for your business.</p>
+          <p>
+            Share a few details and I’ll review the best starting point for
+            your business.
+          </p>
 
           <form
             name="project-inquiry"
@@ -585,17 +692,33 @@ export default function App() {
             data-netlify="true"
             netlify-honeypot="bot-field"
           >
-            <input type="hidden" name="form-name" value="project-inquiry" />
+            <input
+              type="hidden"
+              name="form-name"
+              value="project-inquiry"
+            />
 
             <p className="hiddenField">
               <label>
-                Don’t fill this out if you’re human: <input name="bot-field" />
+                Don’t fill this out if you’re human:{' '}
+                <input name="bot-field" />
               </label>
             </p>
 
-            <input aria-label="Name" name="name" placeholder="Your name" required />
+            <input
+              aria-label="Name"
+              name="name"
+              placeholder="Your name"
+              required
+            />
 
-            <input aria-label="Email" name="email" type="email" placeholder="Your email" required />
+            <input
+              aria-label="Email"
+              name="email"
+              type="email"
+              placeholder="Your email"
+              required
+            />
 
             <input
               aria-label="Current website"
@@ -604,12 +727,19 @@ export default function App() {
               placeholder="Current website (optional)"
             />
 
-            <select aria-label="Service needed" name="service" defaultValue="">
-              <option value="" disabled>What do you need?</option>
+            <select
+              aria-label="Service needed"
+              name="service"
+              defaultValue=""
+            >
+              <option value="" disabled>
+                What do you need?
+              </option>
               <option>SEO + Local SEO</option>
               <option>GEO / AI Search</option>
               <option>Landing Page</option>
               <option>Business Website</option>
+              <option>Real Estate Website</option>
               <option>iOS App</option>
               <option>Not sure yet</option>
             </select>

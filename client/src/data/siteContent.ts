@@ -28,13 +28,14 @@ export const heroBadges = [
   'GEO / AI Search',
   'Landing Pages',
   'Websites',
+  'Real Estate Websites',
   'iOS Apps',
 ] as const;
 
 export const metrics = [
   ['Visible', 'on Google and AI search'],
   ['Built', 'to turn traffic into leads'],
-  ['Focused', 'on Florida service businesses'],
+  ['Focused', 'on Florida businesses and real estate professionals'],
 ] as const;
 
 export const stack = [
@@ -89,6 +90,11 @@ export const services = [
       'Modern, mobile-first websites with strong service architecture, location targeting, clear calls to action, and a foundation that can grow with your business.',
   },
   {
+    title: 'Real Estate Websites & Lead Generation',
+    description:
+      'Custom websites and landing pages for real estate agents and teams, with neighborhood pages, buyer and seller lead funnels, property-search integrations, local SEO, and GEO-ready content for Google and AI search.',
+  },
+  {
     title: 'iOS App Development',
     description:
       'Custom iPhone apps, mobile portals, customer tools, dashboards, and MVPs built with SwiftUI or React Native for businesses that need more than a website.',
@@ -113,6 +119,12 @@ export const growthOutcomes = [
     description:
       'Focused landing pages guide visitors toward one clear action with strong offers, trust signals, fast forms, calls, and WhatsApp.',
     impact: 'More calls, quote requests, leads, and conversations',
+  },
+  {
+    title: 'Generate buyer and seller leads',
+    description:
+      'Real estate websites can target neighborhoods, communities, buyers, sellers, and property searches with clear pages built around local search intent.',
+    impact: 'More qualified real estate leads from target areas',
   },
   {
     title: 'Build trust with a better website',
@@ -146,6 +158,12 @@ export const buildTypes = [
     title: 'Florida service-business website',
     description:
       'A modern website organized around services, locations, proof, local search, mobile speed, and a simple path to contact the business.',
+  },
+  {
+    tag: 'Real estate growth',
+    title: 'Real estate agent growth website',
+    description:
+      'A mobile-first website built around target neighborhoods, buyer and seller services, agent branding, property search, market updates, lead forms, local SEO, and AI-search visibility.',
   },
   {
     tag: 'Mobile product',
@@ -184,6 +202,24 @@ export const packages = [
       'Form, call, or WhatsApp lead path',
     ],
     cta: 'Build my landing page',
+    featured: false,
+  },
+  {
+    name: 'Real Estate Agent Website',
+    price: '$4,500–$9,500+',
+    cadence: 'per project',
+    description:
+      'A professional real estate website designed to attract buyers, sellers, investors, and local property leads.',
+    features: [
+      'Buyer and seller landing pages',
+      'Neighborhood and community pages',
+      'Property-search integration',
+      'Agent profile and personal branding',
+      'Local SEO and GEO-ready structure',
+      'Lead forms and contact paths',
+      'Mobile-first responsive design',
+    ],
+    cta: 'Build my real estate website',
     featured: false,
   },
   {
